@@ -56,6 +56,24 @@ module.exports = {
                 return counts;
             }, {})
             .value();
+    },
+
+    sortAge(data) {
+        return _.chain(data)
+            .sortBy("age")
+            .map((age) => {
+                return age.name
+            })
+            .value();
+    },
+
+    sortFrnd(data) {
+        return _.chain(data)
+            .sortBy("friends")
+            .map((frnd) => {
+                return frnd.name;
+            })
+            .value()
     }
 
 };

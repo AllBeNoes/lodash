@@ -64,7 +64,6 @@ describe('TAGS', () => {
         const res = _.filterTag(data);
         expect(res).toEqual(
             [
-
                 'nisi',
                 'occaecat',
                 'minim',
@@ -180,5 +179,55 @@ describe('TAGS NUMBER', () => {
                 amet: 1,
                 quis: 1
             });
+    })
+});
+
+describe('AGE SORT', () => {
+    it('should sort people by age', () => {
+        const res = _.sortAge(data);
+        expect(res).toEqual([
+            'Clemons Love',
+            'Garrett Hester',
+            'Ann Hull',
+            'Foley Wong',
+            'Shirley Murphy',
+            'June Watts',
+            'Juanita Kaufman',
+            'Jarvis Melendez',
+            'Lenora Stanton',
+            'Denise Curtis',
+            'Hazel Lambert',
+            'Mariana Christensen',
+            'Kitty Hart',
+            'Valdez Compton',
+            'Watts Newton',
+            'Hancock Sims',
+            'Elaine Cooke'
+        ]);
+    })
+});
+
+describe('FRIEND SUM SORT', () => {
+    it('should sort people by number of friend', () => {
+        const res = _.sortFrnd(data);
+        expect(res).toEqual([
+            'Foley Wong',
+            'Ann Hull',
+            'Denise Curtis',
+            'Elaine Cooke',
+            'Valdez Compton',
+            'Watts Newton',
+            'Garrett Hester',
+            'Kitty Hart',
+            'Lenora Stanton',
+            'Hazel Lambert',
+            'Juanita Kaufman',
+            'Mariana Christensen',
+            'Shirley Murphy',
+            'Clemons Love',
+            'Jarvis Melendez',
+            'June Watts',
+            'Hancock Sims'
+        ]);
     })
 });

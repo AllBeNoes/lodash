@@ -39,6 +39,10 @@
       {
         "id": 2,
         "name": "Nichols Gould"
+      },
+      {
+        "id": 3,
+        "name": "Foley Wong"
       }
     ],
     "greeting": "Hello, Clemons Love! You have 8 unread messages.",
@@ -72,20 +76,7 @@
       "laborum",
       "nostrud"
     ],
-    "friends": [
-      {
-        "id": 0,
-        "name": "Christine Wilkinson"
-      },
-      {
-        "id": 1,
-        "name": "Kramer Medina"
-      },
-      {
-        "id": 2,
-        "name": "Norris Stanley"
-      }
-    ],
+    "friends": [],
     "greeting": "Hello, Foley Wong! You have 7 unread messages.",
     "favoriteFruit": "strawberry"
   },
@@ -125,10 +116,6 @@
       {
         "id": 1,
         "name": "Valencia Calderon"
-      },
-      {
-        "id": 2,
-        "name": "Jones Dotson"
       }
     ],
     "greeting": "Hello, Garrett Hester! You have 6 unread messages.",
@@ -166,14 +153,6 @@
       {
         "id": 0,
         "name": "Wong Vance"
-      },
-      {
-        "id": 1,
-        "name": "Danielle Blevins"
-      },
-      {
-        "id": 2,
-        "name": "Hester Sampson"
       }
     ],
     "greeting": "Hello, Elaine Cooke! You have 7 unread messages.",
@@ -256,14 +235,6 @@
       {
         "id": 0,
         "name": "Christian Mosley"
-      },
-      {
-        "id": 1,
-        "name": "Maura Mcdowell"
-      },
-      {
-        "id": 2,
-        "name": "Nadine Shields"
       }
     ],
     "greeting": "Hello, Valdez Compton! You have 7 unread messages.",
@@ -309,6 +280,14 @@
       {
         "id": 2,
         "name": "Rowe Flynn"
+      },
+      {
+        "id": 3,
+        "name": "Foley Wong"
+      },
+      {
+        "id": 4,
+        "name": "Juanita Kaufman"
       }
     ],
     "greeting": "Hello, June Watts! You have 4 unread messages.",
@@ -395,10 +374,6 @@
       {
         "id": 1,
         "name": "Sargent Ross"
-      },
-      {
-        "id": 2,
-        "name": "Keisha Chaney"
       }
     ],
     "greeting": "Hello, Kitty Hart! You have 4 unread messages.",
@@ -444,6 +419,11 @@
       {
         "id": 2,
         "name": "Kristie Mccoy"
+      },
+      {
+        "id": 3,
+        "name": "Juanita Kaufman"
+
       }
     ],
     "greeting": "Hello, Jarvis Melendez! You have 6 unread messages.",
@@ -477,20 +457,7 @@
       "et",
       "velit"
     ],
-    "friends": [
-      {
-        "id": 0,
-        "name": "Stephens Fox"
-      },
-      {
-        "id": 1,
-        "name": "Glover Patel"
-      },
-      {
-        "id": 2,
-        "name": "Knapp Mccall"
-      }
-    ],
+    "friends": [],
     "greeting": "Hello, Ann Hull! You have 10 unread messages.",
     "favoriteFruit": "strawberry"
   },
@@ -526,14 +493,6 @@
       {
         "id": 0,
         "name": "Briana Warren"
-      },
-      {
-        "id": 1,
-        "name": "Nieves Aguirre"
-      },
-      {
-        "id": 2,
-        "name": "Eleanor Holman"
       }
     ],
     "greeting": "Hello, Watts Newton! You have 1 unread messages.",
@@ -575,10 +534,6 @@
       {
         "id": 1,
         "name": "Becker Branch"
-      },
-      {
-        "id": 2,
-        "name": "Freida Bentley"
       }
     ],
     "greeting": "Hello, Lenora Stanton! You have 1 unread messages.",
@@ -612,20 +567,7 @@
       "cillum",
       "tempor"
     ],
-    "friends": [
-      {
-        "id": 0,
-        "name": "Mai Bates"
-      },
-      {
-        "id": 1,
-        "name": "Trina Woodard"
-      },
-      {
-        "id": 2,
-        "name": "Harvey Silva"
-      }
-    ],
+    "friends": [],
     "greeting": "Hello, Denise Curtis! You have 2 unread messages.",
     "favoriteFruit": "banana"
   },
@@ -714,6 +656,14 @@
       {
         "id": 2,
         "name": "Alissa Wright"
+      },
+      {
+        "id": 3,
+        "name": "Juanita Kaufman"
+      },
+      {
+        "id": 4,
+        "name": "Shirley Murphy"
       }
     ],
     "greeting": "Hello, Hancock Sims! You have 7 unread messages.",
