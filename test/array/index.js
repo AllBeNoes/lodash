@@ -1,5 +1,4 @@
 const _ = require('lodash');
-const math = require('mathjs');
 
 module.exports = {
     table(maxX, minX, maxY, minY) {
@@ -24,19 +23,22 @@ module.exports = {
             const row = array[i];
             draw(row.join("\t\t"));
         }
+        draw();
+        draw();
     },
 
-    bldng(entrences, flors, roomsPerFlor) {
+    bldng(entrances, allFloors, roomsPerFloor) {
         const res = [];
-        const rpe = roomsPerFlor * flors;
-        const rpb = rpe * entrences;
+        const roomsPerEntrance = roomsPerFloor * allFloors;
+        const allRooms = roomsPerEntrance * entrances;
 
-        for (let i = 0; i < flors; i++) {
+        for (let i = 0; i < allFloors; i++) {
             res.push([])
         }
 
-        for (let i = 0; i < rpb; i++) {
-            res[(math.abs((~~((i % rpe) / roomsPerFlor)) - (flors - 1)))].push(i + 1)
+        for (let i = 0; i < allRooms; i++) {
+            const calcFloor = Math.floor((i % roomsPerEntrance) / roomsPerFloor);
+            res[allFloors - 1 - calcFloor].push(i + 1)
         }
 
 
