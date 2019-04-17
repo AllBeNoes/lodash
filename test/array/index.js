@@ -43,8 +43,23 @@ module.exports = {
 
 
         return res;
-    }
+    },
 
+    factorial(number) {
+        var res = 1;
+        var count;
+
+        for (count = 1; count <= number; count++) {
+            res *=count;
+        }
+        return res;
+    },
+
+    buttons(number) {
+
+
+
+    }
 
 };
 
