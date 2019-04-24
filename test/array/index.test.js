@@ -57,10 +57,90 @@ describe('FACTORIAL', () => {
     });
 });
 
-describe('PHONE BUTTONS', () => {
-    it('should make all letter combinations', () => {
-        const res = utils.buttons(23);
-        console.log(res);
-    })
+describe('MIXER', () => {
+    it('should mix arrays', () => {
+        const res = utils.mixer(["a", "b", "c"], ["c", "d"]);
+        expect(res).toEqual(
+            [
+                ['a', 'c'],
+                ['a', 'd'],
+                ['b', 'c'],
+                ['b', 'd'],
+                ['c', 'c'],
+                ['c', 'd']
+            ]
+        )
+    });
+});
 
+describe('2 PHONE BUTTONS', () => {
+        it('should make all letter combinations', () => {
+            const res = utils.buttons(23);
+            expect(res).toEqual(
+                [ [ 'a', 'd' ],
+                    [ 'a', 'e' ],
+                    [ 'a', 'f' ],
+                    [ 'b', 'd' ],
+                    [ 'b', 'e' ],
+                    [ 'b', 'f' ],
+                    [ 'c', 'd' ],
+                    [ 'c', 'e' ],
+                    [ 'c', 'f' ] ]
+            )
+        })
+});
+
+describe('4 PHONE BUTTONS', () => {
+    it('should make all letter combinations', () => {
+        const res = utils.buttons(2317);
+        expect(res).toEqual(
+            [
+                [ 'a', 'd', '-', 'p' ],
+                [ 'a', 'd', '-', 'q' ],
+                [ 'a', 'd', '-', 'r' ],
+                [ 'a', 'd', '-', 's' ],
+                [ 'a', 'e', '-', 'p' ],
+                [ 'a', 'e', '-', 'q' ],
+                [ 'a', 'e', '-', 'r' ],
+                [ 'a', 'e', '-', 's' ],
+                [ 'a', 'f', '-', 'p' ],
+                [ 'a', 'f', '-', 'q' ],
+                [ 'a', 'f', '-', 'r' ],
+                [ 'a', 'f', '-', 's' ],
+                [ 'b', 'd', '-', 'p' ],
+                [ 'b', 'd', '-', 'q' ],
+                [ 'b', 'd', '-', 'r' ],
+                [ 'b', 'd', '-', 's' ],
+                [ 'b', 'e', '-', 'p' ],
+                [ 'b', 'e', '-', 'q' ],
+                [ 'b', 'e', '-', 'r' ],
+                [ 'b', 'e', '-', 's' ],
+                [ 'b', 'f', '-', 'p' ],
+                [ 'b', 'f', '-', 'q' ],
+                [ 'b', 'f', '-', 'r' ],
+                [ 'b', 'f', '-', 's' ],
+                [ 'c', 'd', '-', 'p' ],
+                [ 'c', 'd', '-', 'q' ],
+                [ 'c', 'd', '-', 'r' ],
+                [ 'c', 'd', '-', 's' ],
+                [ 'c', 'e', '-', 'p' ],
+                [ 'c', 'e', '-', 'q' ],
+                [ 'c', 'e', '-', 'r' ],
+                [ 'c', 'e', '-', 's' ],
+                [ 'c', 'f', '-', 'p' ],
+                [ 'c', 'f', '-', 'q' ],
+                [ 'c', 'f', '-', 'r' ],
+                [ 'c', 'f', '-', 's' ]
+            ]
+        )
+    })
+});
+
+describe('DECOMPOSE', () => {
+   it('should decompose numbers', () => {
+       const res = utils.decompose(275);
+       expect(res).toEqual(
+           [ 1, 5, 5, 11 ]
+       )
+   })
 });

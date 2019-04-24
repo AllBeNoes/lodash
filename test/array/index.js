@@ -1,5 +1,60 @@
 const _ = require('lodash');
 
+function factorial(number) {
+    let count = 0;
+    count++;
+    if (count >= 100) {
+        return ("ITS TIME TO STOP")
+    } else {
+        if (number != 1) {
+            return number * factorial(number - 1);
+        } else {
+            return number
+        }
+        return number;
+    }
+}
+
+function mixer(arr1, arr2) {
+    let res = [];
+
+    if (arr1.length > 0) {
+        if (arr2.length > 0) {
+            for (let i1 = 0; i1 < arr1.length; i1++) {
+                for (let i2 = 0; i2 < arr2.length; i2++) {
+                    res.push([arr1[i1], arr2[i2]]);
+                }
+            }
+        } else {
+            res = arr1;
+        }
+    } else {
+        if (arr2.length > 0) {
+            res = arr2;
+        } else {
+            res = [];
+        }
+    }
+
+    return res;
+}
+
+
+function decompose(num, k = 2, arr = [1]) {
+    if (num < k) {
+        return arr;
+    } else {
+        if (num % k == 0) {
+            arr.push(k);
+            decompose(num/k, k, arr);
+        } else {
+            decompose(num, k+1, arr);
+        }
+    }
+    return arr;
+}
+
+
 module.exports = {
     table(maxX, minX, maxY, minY) {
         const res = [];
@@ -45,53 +100,46 @@ module.exports = {
         return res;
     },
 
-    factorial(number) {
-        var res = 1;
-        var count;
+    factorial: factorial,
 
-        for (count = 1; count <= number; count++) {
-            res *=count;
-        }
-        return res;
-    },
+    mixer: mixer,
 
     buttons(number) {
+        let res = [];
+        let dig = 0;
+        const num = _.map(_.split(number, ""), _.parseInt);
+        const alph = [
+            ["-"],
+            ["-"],
+            ["a", "b", "c"],
+            ["d", "e", "f"],
+            ["g", "h", "i"],
+            ["j", "k", "l"],
+            ["m", "n", "o"],
+            ["p", "q", "r", "s"],
+            ["t", "u", "v"],
+            ["w", "x", "y", "z"]
+        ];
+
+        _.forEach(num, function (dig) {
+            res = mixer(res, alph[dig]);
+        });
+
+        res = _.flattenDeep(res);
+        res = _.chunk(res, num.length);
+        res = _.uniq(res);
+
+        return res;
+
+    },
 
 
-
-    }
-
+    decompose: decompose
 };
 
-// for (let i = 0; i < flors*enterences + 1; i++) {
-//     const row = [y];
-//     for (let x = minX; x < maxX + 1; x++) {
-//         const mult = x*y;
-//         row.push(mult);
-//     }
-//     res.push(row);
-// }
-// return res
-//
-//
-// 1  2  3|16 17 18
-// 4  5  6|19 20 21
-// 7  8  9|22 23 24
-// 10 11 12|25 26 27
-// 13 14 15|28 29 30
-//
-//     [[1, 2, 3, 16, 17, 18],
-//     [4, 5, 6, 19, 20, 21],
-//     [7, 8, 9, 22, 23, 24],
-//     [10, 11, 12, 25, 26, 27],
-//     [13, 14, 15, 28, 29, 30]]
-//
-// 5 fl, 2 ent, 3 RPF
-//
-//
+
 //        add  remove  start  end
 // push    X                   X
 // pop           X             X
-// unshift X             X
 // shift         X       X
-
+// unshift X             X
